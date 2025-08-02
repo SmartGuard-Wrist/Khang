@@ -1,0 +1,11 @@
+void setup() {
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int analog_value = analogRead(A0);
+  float voltage_input = analog_value * 5.0 / 1023.0;
+  Serial.println(voltage_input);
+  delay(1000);
+}
